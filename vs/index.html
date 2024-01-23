@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Привет! Добро пожаловать на простую страницу</h1>
+
+    <form id="nameForm">
+        <label for="userName">Введите ваше имя:</label>
+        <input type="text" id="userName" required>
+        <button type="button" onclick="showName()">Показать имя</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function showName() {
+            var userName = document.getElementById('userName').value;
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '<p>Привет, ' + userName + '!</p>';
+        }
+    </script>
+
+</body>
+</html>
